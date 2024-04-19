@@ -27,6 +27,11 @@ class TasksController extends Controller  // 変更
 
     public function store(Request $request)
     {
+        // バリデーション
+        $request->validate([
+            'content' => 'required|max:255',
+        ]);
+        
         $task = new Task;  // 変更
         $task->content = $request->content;  // 変更
         $task->save();  // 変更
@@ -54,6 +59,11 @@ class TasksController extends Controller  // 変更
 
     public function update(Request $request, string $id)
     {
+        // バリデーション
+        $request->validate([
+            'content' => 'required|max:255',
+        ]);
+        
         $task = Task::findOrFail($id);  // 変更
         $task->content = $request->content;  // 変更
         $task->save();  // 変更
