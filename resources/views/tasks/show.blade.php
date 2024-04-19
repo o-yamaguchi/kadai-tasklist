@@ -11,7 +11,10 @@
         <th>id</th>
         <td>{{ $task->id }}</td>  <!-- 変更 -->
     </tr>
-
+    <tr>
+            <th>status</th>
+            <td>{{ $task->status }}</td>
+        </tr>
     <tr>
         <th>タスク</th>  <!-- 変更 -->
         <td>{{ $task->content }}</td>  <!-- 変更 -->

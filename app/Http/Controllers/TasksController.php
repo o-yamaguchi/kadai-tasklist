@@ -30,9 +30,11 @@ class TasksController extends Controller  // 変更
         // バリデーション
         $request->validate([
             'content' => 'required|max:255',
+            'status' => 'required|max:10',
         ]);
         
         $task = new Task;  // 変更
+        $task->status = $request->status;    // 追加
         $task->content = $request->content;  // 変更
         $task->save();  // 変更
 
@@ -62,9 +64,11 @@ class TasksController extends Controller  // 変更
         // バリデーション
         $request->validate([
             'content' => 'required|max:255',
+            'status' => 'required|max:10',
         ]);
         
         $task = Task::findOrFail($id);  // 変更
+        $task->status = $request->status;    // 追加
         $task->content = $request->content;  // 変更
         $task->save();  // 変更
 
