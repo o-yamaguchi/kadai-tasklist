@@ -1,6 +1,6 @@
-@extends('layouts.app')
+{{--@extends('layouts.app')--}}
 
-@section('content')
+{{--@section('content')--}}
 
 <div class="prose ml-4">
     <h2 class="text-lg">タスク 一覧</h2>  <!-- 変更 -->
@@ -27,7 +27,7 @@
     </table>
 @endif
 {{-- タスク作成ページへのリンク --}}                                                 
-<a class="btn btn-primary" href="{{ route('tasks.create') }}">新規タスクの投稿</a>  <!-- 変更 -->
+{{--<a class="btn btn-primary" href="{{ route('tasks.show' , ) }}">タスク編集</a>  <!-- 変更 -->--}}
 
 
-@endsection
+{{--@endsection--}}

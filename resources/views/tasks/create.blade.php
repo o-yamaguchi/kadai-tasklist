@@ -1,7 +1,7 @@
-@extends('layouts.app')
+{{--@extends('layouts.app')--}}
 
-@section('content')
-
+{{--@section('content')--}}
+@if (Auth::id() == $user->id)
     <div class="prose ml-4">
         <h2 class="text-lg">タスク新規作成ページ</h2>  <!-- 変更 -->
     </div>
@@ -27,5 +27,5 @@
             <button type="submit" class="btn btn-primary btn-outline">投稿</button>
         </form>
     </div>
-
-@endsection
+@endif
+{{--@endsection--}}
