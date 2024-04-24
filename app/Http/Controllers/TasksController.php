@@ -105,8 +105,7 @@ class TasksController extends Controller  // 変更
         
         if (\Auth::id() === $task->user_id) {
             $task->delete();  // 変更
-            return back()
-            ->with('success','Delete Successful');
+            return redirect('/dashboard');
         }
         
 
